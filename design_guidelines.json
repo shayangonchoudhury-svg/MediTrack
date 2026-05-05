@@ -1,0 +1,146 @@
+{
+  "theme": {
+    "mode": "dark",
+    "archetype": "5 (Jewel & Luxury) - 'Midnight Clinical' variant",
+    "rationale": "The user requested a 'dark and attractive' theme for a health app. We bypass the standard light/sterile medical aesthetic to create a premium, trusting, high-end dashboard. This design relies on Deep Slate and Deep Emerald bases, utilizing optical clarity glassmorphism, crisp 1px inner borders, and high contrast typography instead of generic flat dark modes or overused purple gradients."
+  },
+  "colors": {
+    "background": {
+      "base": "#0B0E14",
+      "tailwind": "bg-slate-950",
+      "surface": "#131824",
+      "surface_tailwind": "bg-slate-900",
+      "glass": "bg-white/5 backdrop-blur-xl border border-white/10"
+    },
+    "primary": {
+      "hex": "#34D399",
+      "tailwind": "text-emerald-400",
+      "bg_tailwind": "bg-emerald-400 text-slate-950",
+      "description": "Used for 'Taken' status, main CTA buttons, and adherence streaks. This creates a bio-luminescent health vibe against the dark slate."
+    },
+    "secondary": {
+      "hex": "#FBBF24",
+      "tailwind": "text-amber-400",
+      "bg_tailwind": "bg-amber-400 text-slate-950",
+      "description": "Used for 'Skipped' or 'Warning' states, and active profile indicator."
+    },
+    "text": {
+      "primary": "text-white",
+      "secondary": "text-slate-400",
+      "muted": "text-slate-500",
+      "accent": "text-emerald-400"
+    },
+    "borders": {
+      "subtle": "border-white/5",
+      "default": "border-white/10",
+      "active": "border-emerald-400/50"
+    },
+    "banned": ["#9D4CDD", "#1B93A4", "Generic purple/teal gradients"]
+  },
+  "typography": {
+    "fonts_installation": "Add Google Fonts for 'Outfit' and 'Manrope' in index.html.",
+    "headings": {
+      "font_family": "Outfit, sans-serif",
+      "weights": ["300", "500", "700"],
+      "tracking": "tracking-tight",
+      "h1": "text-4xl sm:text-5xl font-light tracking-tighter text-white",
+      "h2": "text-2xl sm:text-3xl font-medium tracking-tight text-white",
+      "h3": "text-xl sm:text-2xl font-medium text-white",
+      "h4": "text-lg sm:text-xl font-medium text-slate-200"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["400", "500", "600"],
+      "base": "text-base text-slate-400 leading-relaxed",
+      "small": "text-sm text-slate-500",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-slate-500"
+    }
+  },
+  "spacing_and_layout": {
+    "global_padding": "p-4 md:p-8",
+    "card_padding": "p-6 lg:p-8",
+    "gap_system": {
+      "tight": "gap-4",
+      "standard": "gap-6",
+      "loose": "gap-12"
+    },
+    "grid_strategy": {
+      "dashboard": "Mode B: 'Control Room' Grid - grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+      "notes": "Ensure vertical alignment. Use h-full on children so stat cards match timeline height."
+    },
+    "border_radius": {
+      "cards": "rounded-3xl",
+      "buttons": "rounded-full",
+      "inputs": "rounded-2xl"
+    },
+    "rules": [
+      "Generous Spacing Philosophy: Use p-6 or p-8 inside bordered containers to prevent text collision.",
+      "Mobile-First: Always start with grid-cols-1.",
+      "Optical Alignment: If a button has an icon on the left, add extra padding to visually center it."
+    ]
+  },
+  "surfaces_and_micro_themes": {
+    "cards": {
+      "style": "Neumorphism / Clay & Crisp",
+      "classes": "bg-slate-900 border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.4)]",
+      "hover": "hover:-translate-y-1 hover:border-white/10 transition-all duration-300"
+    },
+    "headers_and_nav": {
+      "style": "Crystal Glassmorphism",
+      "classes": "bg-slate-950/70 backdrop-blur-2xl border-b border-white/10",
+      "z_index": "z-50"
+    },
+    "active_medicine_card": {
+      "style": "The Tracing Beam (simulated via glow)",
+      "classes": "relative overflow-hidden bg-slate-900 border border-emerald-500/30 shadow-[0_0_15px_rgba(16,185,129,0.15)]"
+    }
+  },
+  "motion_and_interactions": {
+    "hover_states": "Must explicitly set hover text color. E.g., hover:bg-emerald-500 hover:text-slate-950.",
+    "focus_states": "focus:outline-none focus:ring-2 focus:ring-emerald-500/50",
+    "transitions": "transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]",
+    "list_animations": "Use staggered fade-up entrances for the medicine schedule list."
+  },
+  "component_instructions": {
+    "buttons": "Use Shadcn Button. Customize to be fully rounded (rounded-full). Primary: bg-emerald-400 text-slate-950 hover:bg-emerald-300. Secondary: bg-white/5 text-white border-white/10 hover:bg-white/10.",
+    "inputs": "Use Shadcn Input. Customize with bg-slate-950/50 border-white/10 text-white rounded-2xl p-4 h-12 focus:border-emerald-500/50.",
+    "modals_drawers": "Use Shadcn Dialog/Drawer. Apply Crystal Glass background (bg-slate-950/80 backdrop-blur-3xl).",
+    "charts": "Use Recharts for adherence stats. Hide axes lines. Chart lines/bars must use stroke-emerald-400. Tooltips: bg-slate-900 border-white/10.",
+    "toasts": "Use Sonner. Dark mode variant, border-white/10, rich colors for success (emerald) and error (rose)."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1761078739436-ccee01f3d89c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwzfHxkYXJrJTIwYWJzdHJhY3QlMjB0ZXh0dXJlfGVufDB8fHx8MTc3Nzk4ODU4MXww&ixlib=rb-4.1.0&q=85",
+        "category": "login_background",
+        "description": "Dark abstract texture with subtle light streaks. Use as a full-screen absolute background for the Login/Register screen with a bg-slate-950/80 overlay."
+      },
+      {
+        "url": "https://images.pexels.com/photos/7505924/pexels-photo-7505924.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "empty_state_background",
+        "description": "Dark rippling water texture. Use masked inside an empty state container (e.g. for 'No medicines scheduled today') with high opacity blend."
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "instruction": "Use lucide-react (default). Ensure stroke-width is 1.5 for a premium, delicate look."
+    }
+  },
+  "testing_attributes": {
+    "instruction": "All interactive elements MUST have data-testid attributes to facilitate robust automated testing. Convention: kebab-case, role-based.",
+    "examples": [
+      "data-testid='login-email-input'",
+      "data-testid='login-submit-button'",
+      "data-testid='profile-switcher-dropdown'",
+      "data-testid='mark-taken-button'",
+      "data-testid='add-medicine-button'",
+      "data-testid='medicine-form-submit'"
+    ]
+  },
+  "page_specific_rules": {
+    "login_register": "Full-screen layout. Use 'login_background' image behind a heavy backdrop-blur-xl overlay. The authentication form should be centered, wrapped in a Glassmorphism card (bg-slate-900/50).",
+    "dashboard": "Sticky top header containing the Family Profile Switcher (using an elegant dropdown). Main area split into a 'Today's Schedule' timeline/list and a 'Control Room' grid for Adherence Stats (Current Streak, % taken).",
+    "medicine_editor": "Implement as a clean slide-out drawer or full-screen modal. Use Shadcn forms with clear inputs for Dosage, Frequency, Time Slots, and Notes. Group related fields together."
+  },
+  "instructions_to_main_agent": "Strictly implement this dark theme using pure HTML + Tailwind alongside highly customized Shadcn components. Override standard Shadcn CSS variables in index.css to match the slate-950/emerald-400 palette exactly. Do NOT use Inter, Roboto, or generic fonts; setup Outfit and Manrope. Ensure all data-testids are in place. Rely entirely on the provided image_urls for media. DO NOT USE ANY PLACEHOLDER IMAGES. For family avatars, use initials in elegantly styled colored circles instead of placeholder photos."
+}
