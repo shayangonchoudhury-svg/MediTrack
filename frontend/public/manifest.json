@@ -1,0 +1,26 @@
+{
+  "name": "MediTrack — Dosage Reminder",
+  "short_name": "MediTrack",
+  "description": "Track every medicine dose, build streaks, and care for your family.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0B0E14",
+  "background_color": "#0B0E14",
+  "categories": ["health", "medical", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

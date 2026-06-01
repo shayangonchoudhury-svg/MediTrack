@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Medicines from "./pages/Medicines";
 import Stats from "./pages/Stats";
 import Profiles from "./pages/Profiles";
+import InstallPrompt from "./components/InstallPrompt";
 
 export default function App() {
   return (
@@ -52,6 +53,7 @@ export default function App() {
             />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          <InstallPrompt />
         </BrowserRouter>
         <Toaster
           position="top-right"
